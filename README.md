@@ -34,14 +34,14 @@ Dataset : 🤗[RemoteSAM-270K](https://huggingface.co/datasets/1e12Leon/RemoteSA
 
 
 ## News
-
+- **2025/7/5**: Our paper "RemoteSAM: Towards Segment Anything for Earth Observation" is accepted by ACM Multimedia 2025 (oral presentation)!
 - **2025/5/7**: We have released the model and dataset! You can download RemoteSAM-270K from 🤗[RemoteSAM-270K](https://huggingface.co/datasets/1e12Leon/RemoteSAM_270K) and checkpoint from 🤗[RemoteSAM](https://huggingface.co/1e12Leon/RemoteSAM).
 - **2025/5/3**: Welcome to RemoteSAM! The preprint of our paper is available. Dataset and model are open-sourced at this repository.
 
 
 
 ## Introduction
-Welcome to the official repository of our paper "RemoteSAM: Towards Segment Anything for Earth Observation" !
+Welcome to the official repository of our paper "RemoteSAM: Towards Segment Anything for Earth Observation"!
 
 ![](assets/RemoteSAM.png)
 
