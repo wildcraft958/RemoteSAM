@@ -29,7 +29,7 @@
 
 Model : 🤗[RemoteSAM](https://huggingface.co/1e12Leon/RemoteSAM) 
 
-Dataset : 🤗[RemoteSAM-270K](https://huggingface.co/datasets/1e12Leon/RemoteSAM_270K)
+Dataset : 🤗[HuggingFace](https://huggingface.co/datasets/1e12Leon/RemoteSAM_270K) &nbsp; &nbsp;  [ModelScope](https://www.modelscope.cn/datasets/e12Leon/RemoteSAM_270K)
 </div>
 
 
