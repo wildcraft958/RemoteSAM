@@ -29,13 +29,13 @@
 
 Model : 🤗[RemoteSAM](https://huggingface.co/1e12Leon/RemoteSAM) 
 
-Dataset : 🤗[HuggingFace](https://huggingface.co/datasets/1e12Leon/RemoteSAM_270K) &nbsp; &nbsp;  [ModelScope](https://www.modelscope.cn/datasets/e12Leon/RemoteSAM_270K)
+Dataset : 🤗[HuggingFace](https://huggingface.co/datasets/1e12Leon/RemoteSAM270k) &nbsp; &nbsp;  [ModelScope](https://www.modelscope.cn/datasets/e12Leon/RemoteSAM_270K)
 </div>
 
 
 ## News
 - **2025/7/5**: Our paper "RemoteSAM: Towards Segment Anything for Earth Observation" is accepted by ACM Multimedia 2025 (oral presentation)!
-- **2025/5/7**: We have released the model and dataset! You can download RemoteSAM-270K from 🤗[RemoteSAM-270K](https://huggingface.co/datasets/1e12Leon/RemoteSAM_270K) and checkpoint from 🤗[RemoteSAM](https://huggingface.co/1e12Leon/RemoteSAM).
+- **2025/5/7**: We have released the model and dataset! You can download RemoteSAM-270K from 🤗[RemoteSAM-270K](https://huggingface.co/datasets/1e12Leon/RemoteSAM270k) and checkpoint from 🤗[RemoteSAM](https://huggingface.co/1e12Leon/RemoteSAM).
 - **2025/5/3**: Welcome to RemoteSAM! The preprint of our paper is available. Dataset and model are open-sourced at this repository.
 
 
@@ -92,7 +92,7 @@ These weights are needed for training to initialize the model.
 We perform all experiments based on our proposed dataset RemoteSAM-270K. 
 
 ### Usage
-1. Download our dataset from [HuggingFace](https://huggingface.co/datasets/1e12Leon/RemoteSAM_270K).
+1. Download our dataset from [HuggingFace](https://huggingface.co/datasets/1e12Leon/RemoteSAM270k).
 2. Copy all the downloaded files to `./refer/data/`. The dataset folder should be like this:
 ```
 $DATA_PATH
