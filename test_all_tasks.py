@@ -9,6 +9,7 @@ import requests
 import base64
 import json
 import sys
+from datetime import datetime
 
 def encode_image(image_path):
     with open(image_path, "rb") as f:
@@ -132,6 +133,36 @@ def main():
         print(f"{status} - {task_name}")
     
     print(f"\nTotal: {passed}/{total} tasks passed ({100*passed/total:.1f}%)")
+    
+    # Save results to JSON file
+    output_data = {
+        "test_metadata": {
+            "timestamp": datetime.now().isoformat(),
+            "endpoint": url,
+            "image_path": image_path,
+            "total_tests": total,
+            "passed": passed,
+            "failed": total - passed,
+            "pass_rate": f"{100*passed/total:.1f}%"
+        },
+        "test_results": {}
+    }
+    
+    # Convert results to serializable format
+    for task_name, (success, response_data) in results.items():
+        output_data["test_results"][task_name] = {
+            "status": "PASS" if success else "FAIL",
+            "response": response_data if success else None
+        }
+    
+    # Generate filename with timestamp
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    output_filename = f"test_results_{timestamp}.json"
+    
+    with open(output_filename, 'w') as f:
+        json.dump(output_data, f, indent=2)
+    
+    print(f"\n✅ Results saved to: {output_filename}")
     
     return 0 if passed == total else 1
 
