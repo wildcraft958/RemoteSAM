@@ -5,6 +5,7 @@ import random
 import torch
 from torchvision import transforms as T
 from torchvision.transforms import functional as F
+from torchvision.transforms import InterpolationMode
 
 
 def pad_if_smaller(img, size, fill=0):
@@ -36,7 +37,9 @@ class Resize(object):
         image = F.resize(image, (self.h, self.w))
         # If size is a sequence like (h, w), the output size will be matched to this.
         # If size is an int, the smaller edge of the image will be matched to this number maintaining the aspect ratio
-        target = F.resize(target, (self.h, self.w), interpolation=Image.NEAREST)
+        if target is None:
+            return image, None
+        target = F.resize(target, (self.h, self.w), interpolation=InterpolationMode.NEAREST)
         return image, target
 
 
@@ -50,9 +53,11 @@ class RandomResize(object):
     def __call__(self, image, target):
         size = random.randint(self.min_size, self.max_size)  # Return a random integer N such that a <= N <= b. Alias for randrange(a, b+1)
         image = F.resize(image, size)
+        if target is None:
+            return image, None
         # If size is a sequence like (h, w), the output size will be matched to this.
         # If size is an int, the smaller edge of the image will be matched to this number maintaining the aspect ratio
-        target = F.resize(target, size, interpolation=Image.NEAREST)
+        target = F.resize(target, size, interpolation=InterpolationMode.NEAREST)
         return image, target
 
 
